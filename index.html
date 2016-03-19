@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<head>
+	<!--===========================================================
+	Developed by Octavian Mos
+	octavianhd@gmail.com
+	============================================================-->
+	<lang="en">
+	<title>Artisan Oradea</title>
+	<meta charset="utf-8">
+	<!--[if lt IE 9]>
+  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="js/custom.js"></script>	
+
+	<!--css-->
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-app="myApp">
+<!--==========================================header==========================================-->
+  <header>
+	<div class="container-fluid" id="headerDiv">
+	  <div class="container">
+		<h2>Centrul stomatologic <br><span class="logo">Artisan</span><br><small> Oradea</small></h2>
+	  </div>
+	  <div class="container">
+		<ul class="navi list-inline text-uppercase">
+		  <li><a href="#home">Despre noi</a></li>
+		  <li><a href="#prog">Programare</a></li>
+		  <li><a href="#contact">Contact</a></li>
+		</ul>
+	  </div>
+	  <a href="#prog" class="btn btn-warning prog-btn" role="button">Doresc o Programare</a>
+	</div>
+  </header>
+
+<!--===========================================Home section==========================================-->
+  <section id="home">
+	<div class="container-fluid">
+	  <div class="row">
+		<div class="col-md-4 col-xs-12">
+		  <img src="pics/home1.jpg" class="img-responsive" alt="dentist">
+		  <h3>Cum am inceput...</h3>
+		  <div class="separator"></div>
+		  <p>
+			Am plecat la drum in anul 2000, cu un capital mic dar cu multa determinare si incredere in fortelor proprii. Singura cale de a avea succes pe piata serviciilor stomatologice este mentinerea unei calitati a actului medical foarte ridicata, un personal inalt calificat dar avand si calitati de bun comunicator, precum si de preturi corecte.
+		  </p>
+		  <a href="#" class="btn home-btn" role="button">Citeste mai mult</a>
+		</div>
+		<div class="col-md-4 col-xs-12">
+		  <img src="pics/home2.jpg" class="img-responsive" alt="dentist">
+		  <h3>Unde suntem...</h3>
+		  <div class="separator"></div>
+		  <p>
+			Dintre serviciile stomatologice de care puteti beneficia in cadrul cabinetului nostru, enumeram: implantologie,ortodonţie, profilaxie dentară, tratamentul cariilor, estetică dentară, protetică, chirurgie dentară, parodontologie, stomatologie pediatrică precum si alte servicii personalizate pe care le puteti afla vizitandu-ne.
+		  </p>
+		  <a href="#" class="btn home-btn" role="button">Citeste mai mult</a>
+		</div>
+		<div class="col-md-4 col-xs-12">
+		  <img src="pics/home3.jpg" class="img-responsive" alt="dentist">
+		  <h3>Unde vrem sa ajungem...</h3>
+		  <div class="separator"></div>
+		  <p>
+			Vrem sa ducem mai departe filozofia pe care a fost fondat acest Centru Stomatologic:"Mai bine pentru pacient".Asta inseamna ca noile aparitii pe piata mondiala in ce priveste aparatura si tehnicile medicale, precum si materialele cu care vom lucra, toate vor gasi o usa deschisa la noi.
+		  </p>
+		  <a href="#" class="btn home-btn" role="button">Citeste mai mult</a>
+		</div>
+	  </div>
+	  <pager-in></pager-in>	
+	</div>
+  </section>
+<!--=================================================Prog section===============================================-->
+  <section id="prog">
+    <div class="container-fluid">
+	  <div class="row">
+		<div class="col-md-2 col-sm-0"></div>
+		<div class="col-md-8 col-sm-12">
+		  <h3 class="well" style="background-color:#ffb2b2;">FORMULAR PROGRAMARE:<span class="glyphicon glyphicon-pencil" style="float:right;"></span></h3>
+	      <form role="form" id="prog_form" name="prog_form" action="MAILTO:" method="post">
+	        <div class="form-group">
+	     	  <label for="name" class="sr-only">Numele:</label>
+	     	  <input type="text" name="Name" class="form-control" id="name" width="50" placeholder="Introduceti numele dvs.">
+	     	</div>
+	     	<div class="form-group">
+	     	  <label for="email" class="sr-only">e-mail:</label>
+	     				<input type="email" name="Email" class="form-control" id="email" width="50" placeholder="Introduceti email-ul dvs.">
+	     	 		</div>
+	     	  		<div class="form-group">
+	     				<label for="phone" class="sr-only">Telefonul:</label>
+	     				<input type="phone" name="Phone" id="phone" class="form-control" placeholder="Introduceti nr.dvs.de telefon">
+	     	 		</div>
+	     	  		<div class="form-group">
+	     				<label for="date" class="sr-only">data:</label>
+	     				<input type="date" name="Date" id="date" class="form-control" placeholder="Introduceti data programarii">
+	     	  		</div>
+	     	  		<textarea class="form-control" name="Comments" id="comments" placeholder="Introduceti mesajul dvs." rows="5" colls="50"></textarea>
+	     			</br>
+	     	  		<button class="btn btn-lg btn-info" id = "finalButton"><span class="glyphicon glyphicon-envelope"></span> Finalizare</button>
+	     			</form>
+	     			</br>
+	    			<div class="container-fluid" id = "divProg" style = "display:none;">
+						<p>
+						Draga <span id = "name_in" style="font-weight:bold;"></span>, va multumim pentru programarea facuta in data de:
+						 <span id = "date_in" style="font-weight:bold;"></span>.<br> In cel mai scurt timp vom lua legatura cu dvs.pentru detaliile programarii.
+						</p>
+	 					</br>
+						<h3>Va multumim!</h3>
+						<div class="container-fluid">
+						 	<img src="pics/prog1.jpg" alt="image">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 col-sm-0"></div>
+			</div>
+		</div>
+		<!-- pager -->
+		<pager-in></pager-in>
+	</section>
+<!--===================================================Contact section=============================================-->
+	<section id="contact">	
+		<div class="container-fluid">		
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					</br>
+	    			<p>
+	     			<h4>Datele noastre de contact sunt urmatoarele:</h4>
+	     			</p>
+	     			<div class="separator"></div>
+	     			<p>
+	     			Adresa<b> Cabinetului stomatologic Artisan</b> este: str.Iza, nr.15, bl.S12, apt.24, Oradea, jud.Bihor, Romania.
+	   				</p>
+	     			<p>
+	     			Numerele noastre de telefon sunt:</br>
+
+	     			<div class="lead text-center">
+	     				<h3><span class="glyphicon glyphicon-phone-alt"></span> 0259/12.34.56 </h3> 
+						<h3><span class="glyphicon glyphicon-phone"></span> 0712/12.34.56 </h3>
+					</div>
+	     			</br>
+	    		</div>	
+<!--Google maps-->
+        		<div class="col-xs-0 col-md-6" id="mapDiv">
+        			</br>
+       				<p>
+	     			 <h4>Ne puteti localiza pe harta de mai jos:</h4>
+        			</p>
+        			<div class="separator"></div>
+        			<div id="googleMap" style="width:500px;height:380px;box-shadow:5px 5px 5px #888888;border-radius:10px;"></div>
+        			</br>
+       			</div>
+       		</div>
+       	</div>
+<!--Pager-->
+		<pager-in></pager-in>	
+	</section>
+<!--===========================================Footer===========================================-->
+	<footer>
+		<div id="footerNavDiv" class="container">
+			<div class="navi pull-left">
+          <ul class="list-inline">
+            <li><a href="#home">Despre noi</a></li>
+            <li><a href="#prog">Programare</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+		<div class="social pull-right">
+          <ul class="list-inline">
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          </ul>
+        </div>
+		</div>
+		<div class="container text-center">
+			<p class="logo">Artisan</p>
+			<p><b>&copy Copyright Octavian Mos</b></p>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollUp.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script> 
+    <script src="js/smooth-scroll.js"></script> 
+</body>
+</html>

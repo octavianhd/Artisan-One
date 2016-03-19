@@ -1,0 +1,264 @@
+/*----------------------------------------------
+
+    Developed by Octavian Mos 2015
+    octavianhd@gmail.com
+
+-----------------------------------------------*/
+/*----------------------------------------------
+
+    Table of content:
+
+    #Main;
+    #Header;
+    #Navigation;
+    #Home section;
+    #Prog section;
+    #Contact section;
+    #Footer;
+    #Scroll-up;
+    #Responsive.
+    
+-----------------------------------------------*/
+
+/*---------------------------Main-----------------------------*/
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: sans-serif;
+	font-size: medium;
+	margin: 0;
+}
+p{
+	text-indent: 20px;
+}
+ul{
+	padding: 0;
+	margin-bottom: 0;
+	list-style-type: none;
+}
+a, button{
+	transition: 0.4s ease-in-out;
+	-moz-transition: 0.4s ease-in-out;
+	-webkit-transition: 0.4s ease-in-out;
+}
+a:hover,a:focus{
+	text-decoration: none;
+}
+.separator{
+	width: 50%;
+	height: 2px;
+	background-color: #ffe6e6;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+/*-------------------Header------------------------------*/
+
+header{
+	width: 100%;
+	height: 650px;
+	background-image: url(../pics/header_img1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: sans-serif;
+	text-align: center;
+	color: #fff;
+}
+header h2{
+	font-size: 44px;
+	font-weight: 800;
+	padding: 60px 0;
+	text-shadow: 3px 3px 5px #888888,2px 2px 3px #000;
+}
+.logo{
+	font-family: "Brusher";
+	font-size: 54px;
+	text-shadow: 2px 2px 4px #000;
+}
+
+/*------------------------------Navigation----------------------------*/
+.navi ul{
+	padding: 50px 0 60px 0;
+}
+.navi li{
+	padding: 0 20px;
+}
+.navi li a{
+	font-family: sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+	text-shadow: 1px 1px 2px #000;
+	text-decoration: none;
+}
+.navi li a:hover{
+	color: red;
+	text-shadow: 2px 2px 4px #000;
+}
+.prog-btn{
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: white;
+	/*background-color: green;*/
+	padding: 20px 40px;
+	margin-top: 100px;
+	border-radius: 50px;
+	transition:1s;
+}
+.prog-btn:hover{
+	background-color: #ff9900;
+	box-shadow: 5px 5px 10px #888888;
+}
+/*--------------------------------Home section-------------------------*/
+
+#home{
+	margin: 20px 0;
+}
+#home img{
+	width: 350px;
+	height: 250px;
+	padding: 20px 40px;
+}
+.home-btn{
+	background-color: #ffb2b2;
+	color: #fff;
+	margin-top: 40px;
+
+}
+.home-btn:hover{
+	background-color: #ff9999;
+	box-shadow: 5px 5px 10px #888888;
+}
+
+/*-------------------------------Prog section------------------------*/
+
+#prog{
+	padding: 20px 0;
+	background-color: #ffe6e6;
+	text-align: center;
+}
+#prog input, #prog textarea{
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #ffb2b2;
+	background: none;
+	text-align: center;
+	text-transform: uppercase;
+}
+#prog button{
+	position:center;
+	padding: 15px 30px;
+	background-color: #ffb2b2;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+#prog button:hover{
+	box-shadow: 5px 5px 5px #888888;
+	background-color: #ff9999;
+}
+#prog img{
+	width: 300px;
+	height: 200px;
+	margin: 50px 0;
+}
+/*--------------------------------Contact section---------------------*/
+
+#contact{
+	margin: 20px 0;
+}
+#contact h3{
+	font-weight: 600;
+	transition: 0.5s;
+}
+#contact h3:hover{
+	text-shadow: 5px 5px 10px #888888;
+}
+/*-------------------------------Footer-------------------------------*/
+
+footer {
+	padding: 20px 0;
+	background-color: #ffb2b2;
+}
+footer .navi ul{
+	padding: 10px 0;
+}
+.social ul li {
+	padding: 5px 10px;
+}
+.social ul li a {
+	font-size: 20px;
+	color: #888888;
+}
+.social ul li a:hover {
+	color: #50c3af;
+}
+
+/*-----------------------Scroll Up------------------------*/
+
+#scrollUp {
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	background: url(../pics/top.png) no-repeat;
+	opacity: .5;
+}
+#scrollUp:hover {
+	opacity: 1;
+}
+
+/*-------------------------Responsive------------------------*/
+
+@media(max-width: 768px){
+	header{
+		height: 350px;
+	}
+	header h2{
+		font-size: 24px;
+		font-weight: 600;
+		padding: 20px 0;
+		text-shadow: 5px 5px 10px #888888,1px 1px 3px black;
+	}
+	.logo{
+		font-size: 30px;
+	}
+	.navi ul{
+		padding: 20px 0 20px 0;
+	}
+	.navi li{
+		padding: 0 10px;
+	}
+	.navi li a{
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	.prog-btn{
+		font-size: 16px;
+		font-weight: 400;
+		text-transform: uppercase;
+		padding: 10px 20px;
+		margin-top: 50px;
+	}
+	#home{
+		font-size: 12px;
+	}
+	#home img{
+		width: 180px;
+		height: 125px;
+		padding: 10px 20px;
+	}
+	.home-btn{
+		margin-top: 0;
+	}
+	#prog h3{
+		font-size: 16px;
+	}
+
+	#mapDiv{
+		display: none;
+	}
+}
